@@ -16,7 +16,7 @@ public class ArticleManagerments {
 		Date date = new Date();
 		Article article=null;
 		Action action=new Action();
-		for(int i=0;i<=5;i++){
+		for(int i=0;i<=15;i++){
 			article=new Article();
 			article.setId(i);
 			article.setAuthor("Author");
