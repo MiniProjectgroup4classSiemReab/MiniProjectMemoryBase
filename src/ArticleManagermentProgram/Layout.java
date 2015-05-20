@@ -1,5 +1,6 @@
 package ArticleManagermentProgram;
 
+import java.io.Console;
 import java.util.ArrayList;
 
 public class Layout {	
@@ -58,7 +59,11 @@ public class Layout {
 
 	public void drawTable(ArrayList<Article> arr){
 		String total_record = ""+arr.size(); 
-		String page = "5/"+((arr.size()/5)+(arr.size()%5));			
+		String page;
+		if((arr.size()%5)!=0) 
+			page= "5/"+((arr.size()/5)+1);
+		else
+			page= "5/"+((arr.size()/5));
 		displayText( "+"); drawSign(128, "="); displayText( "+"); endOfLine();
 		displayText( "|"); 
 		drawSign(7, " "); displayText("NO"); drawSign(7, " "); displayText( "|"); 
@@ -113,4 +118,6 @@ public class Layout {
 		}
 		System.out.print(str+sp);
 	}
+		
+	
 }
